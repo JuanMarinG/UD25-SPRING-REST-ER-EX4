@@ -2,9 +2,9 @@ DROP TABLE IF EXISTS Peliculas;
 DROP TABLE IF EXISTS Salas;
 
 Create table Peliculas(
-idFilm int auto_increment primary key,
+id_Film int auto_increment primary key,
 Nombre varchar (100),
-CalificacionEdad int);
+Calificacion_Edad int);
 
 Create table Salas (
 id_Codigo int auto_increment primary key,
@@ -12,10 +12,10 @@ Nombre varchar(100),
 Pelicula int,
 Foreign key (Pelicula) references Peliculas(id_Film));
 
-INSERT INTO Peliculas (Nombre, CalificacionEdad) VALUES ('StarWars', 16);
-INSERT INTO Peliculas (Nombre, CalificacionEdad) VALUES ('Jurassic Park', 18);
-INSERT INTO Peliculas (Nombre, CalificacionEdad) VALUES ('Rey Leon', 8);
+INSERT INTO Peliculas (Calificacion_Edad, Nombre) VALUES (16,'StarWars');
+INSERT INTO Peliculas (Calificacion_Edad, Nombre) VALUES (18,'Jurassic Park');
+INSERT INTO Peliculas (Calificacion_Edad, Nombre) VALUES (8,'Rey Leon');
 
-INSERT INTO Salas (Nombre) VALUES ('SAL1');
-INSERT INTO Salas (Nombre) VALUES ('SAL2');
-INSERT INTO Salas (Nombre) VALUES ('SAL3');
+INSERT INTO Salas (id_Codigo, Nombre, Pelicula) VALUES (1,'SAL1',1);
+INSERT INTO Salas (id_Codigo, Nombre, Pelicula) VALUES (2,'SAL2',3);
+INSERT INTO Salas (id_Codigo, Nombre, Pelicula) VALUES (3,'SAL3',2);
