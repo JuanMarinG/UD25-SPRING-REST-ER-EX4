@@ -1,5 +1,9 @@
 package com.juan.EX4.dao;
 
-public interface IPeliculasDAO {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.juan.EX4.dto.Peliculas;
+
+public interface IPeliculasDAO extends JpaRepository<Peliculas, Integer> {
 
 }
